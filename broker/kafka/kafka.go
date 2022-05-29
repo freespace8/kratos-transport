@@ -2,6 +2,7 @@ package kafka
 
 import (
 	"errors"
+	"fmt"
 	"sync"
 	"time"
 
@@ -25,6 +26,7 @@ type kafkaBroker struct {
 }
 
 func NewBroker(opts ...broker.Option) broker.Broker {
+	fmt.Println("testxxxx")
 	options := broker.NewOptionsAndApply(opts...)
 
 	var cAddrs []string
